@@ -23,14 +23,17 @@ p {
 }
 
 #blueButton {
+　color:blue;
   background-color: #4A90E2;
 }
 
 #redButton {
+　color:red;
   background-color: #E44236;
 }
 
 #yellowButton {
+　color:yellow;
   background-color: #FBC531;
 }
 
