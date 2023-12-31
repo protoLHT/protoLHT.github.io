@@ -11,3 +11,19 @@ h1 {
 p {
     font-size: 18px;
 }
+/* ボタンの基本スタイル */
+#myButton {
+  padding: 10px 20px;
+  background-color: #4A90E2;
+  color: white;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+/* ボタンが押された時のスタイル */
+#myButton:active {
+  background-color: #3672b8; /* 色を少し暗く */
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2) inset; /* 内側の影で凹んでいるように見せる */
+}
