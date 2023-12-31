@@ -19,7 +19,7 @@ p {
   border: none;
   outline: none;
   cursor: pointer;
-  transition: background-color 0.3s, box-shadow 0.3s;
+  transition: background-color 0.3s, box-shadow 1.0s;
 }
 
 #blueButton {
