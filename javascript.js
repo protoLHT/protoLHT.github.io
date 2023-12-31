@@ -1,5 +1,5 @@
 // 派手な音ファイルのパスを指定
-var audio = new Audio('fancy-sound.mp3');
+var audio = new Audio('./sound/fancy-sound.mp3');
 
 // すべてのボタンにイベントリスナーを追加
 document.querySelectorAll('.button').forEach(function(button) {
