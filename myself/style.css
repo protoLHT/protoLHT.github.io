@@ -1,0 +1,62 @@
+/* style.css */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 40px;
+    background-color: #f8f8f8;
+    color: #500;
+}
+h1 {
+    color: #4A90E2;
+}
+p {
+    font-size: 18px;
+}
+/* ボタンの基本スタイル */
+/* 共通スタイル */
+.button {
+  padding: 10px 20px;
+  color: white;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 1.0s;
+}
+
+#blueButton {
+　color:#3672b8;
+  background-color: #4A90E2;
+}
+
+#redButton {
+　color:#b83227;
+  background-color: #E44236;
+}
+
+#yellowButton {
+　color: #e1b12c;
+  background-color: #FBC531;
+}
+
+/* 共通のアクティブ状態のスタイル */
+.button:active {
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2) inset;
+}
+
+/* 色ごとのアクティブ状態の背景色 */
+#blueButton:active {
+  background-color: #3672b8;
+}
+
+#redButton:active {
+  background-color: #b83227;
+}
+
+#yellowButton:active {
+  background-color: #e1b12c;
+}
+
+/* ボタンが押された時のスタイル */
+#myButton:active {
+  background-color: #3672b8; /* 色を少し暗く */
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2) inset; /* 内側の影で凹んでいるように見せる */
+}
