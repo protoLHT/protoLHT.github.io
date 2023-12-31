@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // 青いボタンがクリックされた時のイベント
     blueButton.addEventListener('click', function() {
-        window.location.href = './game.html'; // ここに遷移先のファイル名を入れる
+        window.location.href = './gamecenter/index.html';
     });
 
     // 赤いボタンがクリックされた時のイベント
