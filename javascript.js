@@ -1,9 +1,22 @@
-// 派手な音ファイルのパスを指定
-var audio = new Audio('Cyber15-mp3/Cyber15-1.mp3');
+// ドキュメントが完全に読み込まれた後に関数を実行
+document.addEventListener('DOMContentLoaded', function() {
+    // ボタン要素を取得
+    var blueButton = document.getElementById('blueButton');
+    var redButton = document.getElementById('redButton');
+    var yellowButton = document.getElementById('yellowButton');
 
-// すべてのボタンにイベントリスナーを追加
-document.querySelectorAll('.button').forEach(function(button) {
-  button.addEventListener('click', function() {
-    audio.play(); // ボタンがクリックされた時に音を再生
-  });
+    // 青いボタンがクリックされた時のイベント
+    blueButton.addEventListener('click', function() {
+        window.location.href = './game.html'; // ここに遷移先のファイル名を入れる
+    });
+
+    // 赤いボタンがクリックされた時のイベント
+    redButton.addEventListener('click', function() {
+        window.location.href = './anotherPage.html'; // 別の遷移先
+    });
+
+    // 黄色いボタンがクリックされた時のイベント
+    yellowButton.addEventListener('click', function() {
+        window.location.href = './thirdPage.html'; // さらに別の遷移先
+    });
 });
