@@ -77,6 +77,35 @@ class OthelloBoard {
             }
         }
     }
+    drawBoard() {
+        const boardElement = document.getElementById('board');
+        boardElement.innerHTML = ''; // 盤面をクリア
+
+        for (let i = 0; i < 8; i++) {
+            const row = document.createElement('tr');
+            for (let j = 0; j < 8; j++) {
+                const cell = document.createElement('td');
+                cell.textContent = this.board[i][j];
+                cell.addEventListener('click', () => this.handleCellClick(i, j));
+                row.appendChild(cell);
+            }
+            boardElement.appendChild(row);
+        }
+    }
+
+    // セルをクリックしたときの処理
+    handleCellClick(x, y) {
+        // 石を置く処理（例えば、現在のプレイヤーを引数にplaceStoneを呼び出す）
+        // 石を置いた後、盤面を再描画
+        this.drawBoard();
+    }
+}
+
+// ゲーム開始時に盤面を描画
+document.addEventListener('DOMContentLoaded', () => {
+    const game = new OthelloBoard();
+    game.drawBoard();
+});
 }
 
 // ゲームのロジックを操作する部分
