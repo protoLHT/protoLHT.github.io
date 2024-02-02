@@ -1,17 +1,37 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
 <head>
-    <title>ゲームセンター</title>
+    <meta charset="UTF-8">
+    <title>オセロゲーム</title>
     <link rel="stylesheet" type="text/css" href="./style.css">
+    <style>
+        table {
+            border-collapse: collapse;
+            margin: auto;
+        }
+        td {
+            width: 40px;
+            height: 40px;
+            background-color: green;
+            border: 1px solid black;
+            text-align: center;
+            vertical-align: middle;
+            font-size: 24px;
+            cursor: pointer;
+        }
+        .button {
+            margin: 10px;
+        }
+        #currentPlayer {
+            text-align: center;
+            margin: 20px;
+        }
+    </style>
 </head>
 <body>
-    <h1>ゲームセンターへようこそ！</h1>
-    <p>ここではいろいろなゲームが遊べます！（予定）</p>
-
-    <a href="./othello.html"><button id="redButton" class="button">オセロ</button></a>
-    <button id="blueButton" class="button">青いボタン</button>
-    <button id="yellowButton" class="button">黄色いボタン</button>
-
-    <a href="javascript:history.back()"><button class="button">戻る</button></a>
+    <h1>オセロゲーム</h1>
+    <div id="currentPlayer">現在のプレイヤー: 白</div>
+    <table id="board"></table>
+    <script src="othello.js"></script> <!-- JavaScriptコードを含むファイル -->
 </body>
 </html>
