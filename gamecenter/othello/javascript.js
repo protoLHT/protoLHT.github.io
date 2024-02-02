@@ -93,11 +93,26 @@ class OthelloBoard {
         }
     }
 
-    // セルをクリックしたときの処理
     handleCellClick(x, y) {
-        // 石を置く処理（例えば、現在のプレイヤーを引数にplaceStoneを呼び出す）
-        // 石を置いた後、盤面を再描画
-        this.drawBoard();
+        if (this.isValidMove(x, y, this.currentPlayer)) {
+            this.placeStone(x, y, this.currentPlayer);
+            this.drawBoard(); // 盤面を再描画
+            this.switchPlayer(); // プレイヤーを切り替え
+        } else {
+            alert("Invalid move. Try again.");
+        }
+    }
+
+    // プレイヤーを切り替える
+    switchPlayer() {
+        this.currentPlayer = this.currentPlayer === Cell.Black ? Cell.White : Cell.Black;
+        document.getElementById('currentPlayer').textContent = `現在のプレイヤー: ${this.currentPlayer === Cell.Black ? "黒" : "白"}`;
+    }
+
+    // クラス初期化時に現在のプレイヤーを追加
+    constructor() {
+        // 既存の初期化処理...
+        this.currentPlayer = Cell.White; // 初期プレイヤーを設定
     }
 }
 
@@ -106,7 +121,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const game = new OthelloBoard();
     game.drawBoard();
 });
-}
 
 // ゲームのロジックを操作する部分
 function playOthello() {
